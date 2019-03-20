@@ -32,7 +32,6 @@ def won?(board)
 end
 
 def full?(board)
-  board.all? do |space|
-    position_taken?(board, space.index)
-  end
+  (0..8).to_a.all? do |index|
+    position_taken?(board, index)
 end
