@@ -25,7 +25,7 @@ def won?(board)
     win_combination.all? {|win_index| board[win_index] == "O"}
   end
   if winning_combo = []
-    false
+    winning_combo = false
   end
   winning_combo
 end
