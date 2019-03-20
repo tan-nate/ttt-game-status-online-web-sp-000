@@ -19,7 +19,6 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   game_win_combinations = WIN_COMBINATIONS.select do |win_combination|
-    #binding.pry
     win_combination.all? {|win_index| board[win_index] == "X"} ||
     win_combination.all? {|win_index| board[win_index] == "O"}
   end
@@ -34,5 +33,13 @@ end
 def full?(board)
   (0..8).to_a.all? do |index|
     position_taken?(board, index)
+  end
+end
+
+def draw?(board)
+  if !won?(board) && full?(board)
+    true
+  else
+    false
   end
 end
