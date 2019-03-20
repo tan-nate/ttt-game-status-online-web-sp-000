@@ -19,17 +19,18 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   #binding.pry
-  winning_combo = WIN_COMBINATIONS.select do |win_combination|
+  win_combinations_array = WIN_COMBINATIONS.select do |win_combination|
     #binding.pry
     win_combination.all? {|win_index| board[win_index] == "X"} ||
     win_combination.all? {|win_index| board[win_index] == "O"}
   end
   #binding.pry
-  if winning_combo == []
-    winning_combo = false
+  if win_combinations_array == []
+    win_combinations_array = false
+  else
+    win_combinations_array.flatten!
   end
-  winning_combo
-  #binding.pry
+  win_combinations_array
 end
 
 #binding.pry
