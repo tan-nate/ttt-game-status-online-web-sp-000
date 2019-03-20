@@ -31,3 +31,8 @@ def won?(board)
   game_win_combinations
 end
 
+def full?(board)
+  board.all? do |space|
+    position_taken?(board, space.index)
+  end
+end
