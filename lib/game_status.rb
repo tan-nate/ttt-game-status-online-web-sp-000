@@ -24,12 +24,12 @@ def won?(board)
     win_combination.all? {|win_index| board[win_index] == "X"} ||
     win_combination.all? {|win_index| board[win_index] == "O"}
   end
-  binding.pry
-  if winning_combo = []
+  #binding.pry
+  if winning_combo == []
     winning_combo = false
   end
   winning_combo
-  binding.pry
+  #binding.pry
 end
 
-binding.pry
+#binding.pry
