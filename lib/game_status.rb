@@ -27,6 +27,7 @@ def won?(board)
   if winning_combo = []
     false
   end
+  winning_combo
 end
 
 binding.pry
