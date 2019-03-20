@@ -28,6 +28,7 @@ def won?(board)
     winning_combo = false
   end
   winning_combo
+  binding.pry
 end
 
 binding.pry
