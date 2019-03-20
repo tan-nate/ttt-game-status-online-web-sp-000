@@ -1,6 +1,6 @@
 require 'pry'
 
-#board = ["X", "X", "X", "O", "O", " ", " ", " ", " "]
+board = ["X", "X", "X", "O", "O", " ", " ", " ", " "]
 
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
@@ -30,4 +30,4 @@ def won?(board)
   winning_combo
 end
 
-#binding.pry
+binding.pry
