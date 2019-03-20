@@ -20,6 +20,7 @@ def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
     #binding.pry
     if win_combination.all? {|win_index| board[win_index] == "X"}
+      binding.pry
       win_combination
     elsif win_combination.all? {|win_index| board[win_index] == "O"}
       win_combination
