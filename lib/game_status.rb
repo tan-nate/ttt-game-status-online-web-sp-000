@@ -17,9 +17,13 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   #binding.pry
-  WIN_COMBINATIONS.select do |win_combination|
+  if 
+    WIN_COMBINATIONS.select do |win_combination|
     #binding.pry
     win_combination.all? {|win_index| board[win_index] == "X"} ||
     win_combination.all? {|win_index| board[win_index] == "O"}
+    end
+  == []
+    false
   end
 end
