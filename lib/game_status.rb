@@ -60,3 +60,5 @@ def winner(board)
   end
   binding.pry
 end
+
+binding.pry
