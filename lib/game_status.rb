@@ -19,15 +19,12 @@ def won?(board)
   #binding.pry
   WIN_COMBINATIONS.each do |win_combination|
     #binding.pry
-    win_combination.each do |win_index|
-      #binding.pry
-      if win_index.all? {|win_index| board[win_index] == "X"}
-        win_combination
-      elsif win_index.all? {|win_index| board[win_index] == "O"}
-        win_combination
-      else
-        false
-      end
+    if win_combination.all? {|win_index| board[win_index] == "X"}
+      win_combination
+    elsif win_combination.all? {|win_index| board[win_index] == "O"}
+      win_combination
+    else
+      false
     end
   end
 end
