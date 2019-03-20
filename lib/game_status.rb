@@ -34,4 +34,5 @@ end
 def full?(board)
   (0..8).to_a.all? do |index|
     position_taken?(board, index)
+  end
 end
